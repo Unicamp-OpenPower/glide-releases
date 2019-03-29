@@ -20,8 +20,8 @@ go:
 - "1.12.1"
 
 install:
-  - apt update
-  - apt install lftp
+  - sudo apt update
+  - sudo apt install lftp
 
 script:
   - cd $GOPATH/src/github.com
