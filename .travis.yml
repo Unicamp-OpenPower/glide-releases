@@ -12,8 +12,8 @@ go:
 
 install:
     - sudo apt update
-        - sudo apt install lftp
-            - python3 ftp_version.py
+    - sudo apt install lftp
+    - python3 ftp_version.py
 
 script:
     - bash build.sh
