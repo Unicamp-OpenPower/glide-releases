@@ -24,8 +24,8 @@ script:
   - mkdir Masterminds
   - cd Masterminds
   - wget https://github.com/Masterminds/glide/archive/v$version.zip
-  - unzip glide-$version.zip
-  - mv glide-$version glide
+  - unzip v$version.zip
+  - mv v$version glide
   - cd glide
   - ls
   - make build
