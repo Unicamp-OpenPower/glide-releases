@@ -1,29 +1,19 @@
 matrix:
-  include:
+    include:
     - env: version=0.10.2
-    - env: version=0.10.1
 
 dist: trusty
-os: 
-  - linux-ppc64le
+os:
+    - linux-ppc64le
 sudo: required
 language: go
 go:
 - "1.12.1"
 
 install:
-  - sudo apt update
-  - sudo apt install lftp
+    - sudo apt update
+        - sudo apt install lftp
+            - python3 ftp_version.py
 
 script:
-  - cd $GOPATH/src/github.com
-  - mkdir Masterminds
-  - cd Masterminds
-  - wget https://github.com/Masterminds/glide/archive/$version.zip
-  - unzip $version.zip
-  - mv glide-$version glide
-  - cd glide
-  - ls
-  - make build
-  - mv glide glide-$version
-  - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/glide glide-$version"
+    - bash build.sh
