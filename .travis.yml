@@ -1,0 +1,33 @@
+matrix:
+  include:
+    - env: version=0.13.1
+    - env: version=0.13.1
+    - env: version=0.13.0
+    - env: version=0.12.3
+    - env: version=0.12.2
+    - env: version=0.12.1
+    - env: version=0.12.0
+    - env: version=0.11.1
+    - env: version=0.11.0
+    - env: version=0.10.2
+
+dist: trusty
+os: 
+  - linux-ppc64le
+sudo: required
+language: go
+go:
+- "1.12.1"
+
+script:
+  - cd $GOPATH/src/github.com
+  - mkdir Masterminds
+  - cd Masterminds
+  - wget https://github.com/Masterminds/glide/archive/v$version.zip
+  - unzip glide-$version.zip
+  - mv glide-$version glide
+  - cd glide
+  - ls
+  - make build
+  - mv glide glide-$version
+  - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/glide glide-$version"
