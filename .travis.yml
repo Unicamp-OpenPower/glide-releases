@@ -26,5 +26,5 @@ script:
   - make build
   - mv glide glide-$version
   - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/glide glide-$version"
-  - mv glide glide-0.13.1
+  - mv glide-$version glide-0.13.1
   - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/glide/latest glide-0.13.1"
