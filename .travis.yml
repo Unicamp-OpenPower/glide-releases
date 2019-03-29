@@ -1,15 +1,7 @@
 matrix:
   include:
-    - env: version=0.13.1
-    - env: version=0.13.1
-    - env: version=0.13.0
-    - env: version=0.12.3
-    - env: version=0.12.2
-    - env: version=0.12.1
-    - env: version=0.12.0
-    - env: version=0.11.1
     - env: version=0.11.0
-    - env: version=0.10.2
+#    - env: version=0.10.2
 
 dist: trusty
 os: 
