@@ -29,7 +29,7 @@ script:
   - cd Masterminds
   - wget https://github.com/Masterminds/glide/archive/v$version.zip
   - unzip v$version.zip
-  - mv v$version glide
+  - mv glide-$version glide
   - cd glide
   - ls
   - make build
