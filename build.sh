@@ -11,7 +11,6 @@ then
     unzip v$github_version.zip
     mv glide-$github_version glide
     cd glide
-    ls
     make build
     mv glide glide-$github_version
    
