@@ -1,14 +1,16 @@
-dist: bionic
 os: linux
 arch: ppc64le
+dist: bionic
 sudo: required
 language: go
 go:
-- "1.13.x"
+- "1.14.x"
 
 install:
     - sudo apt update
-    - sudo apt install lftp
+    - sudo apt install lftp lftp unzip zip
+    - sudo apt install rpm
+    - sudo apt install build-essential python3 tar wget
     - python3 ftp_version.py
 
 script:
