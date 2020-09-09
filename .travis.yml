@@ -8,7 +8,7 @@ go:
 
 install:
     - sudo apt update
-    - sudo apt install lftp lftp unzip zip
+    - sudo apt install lftp unzip zip
     - sudo apt install rpm
     - sudo apt install build-essential python3 tar wget
     - python3 ftp_version.py
