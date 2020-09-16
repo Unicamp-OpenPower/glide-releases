@@ -28,7 +28,7 @@ then
     sudo mv empacotar-rpm.sh $LOCALPATH
     cd $LOCALPATH
     sudo ./empacotar-deb.sh glide glide-$github_version $github_version " "
-    sudo ./empacotar-rpm.sh glide glide-$github_version $github_version " " "Package Management for Go"
+    sudo ./empacotar-rpm.sh glide glide-$github_version $github_version " " "Package Management for Go."
     if [[ $github_version > $ftp_version ]]
     then
         lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/glide/latest glide-$github_version"
